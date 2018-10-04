@@ -13,7 +13,9 @@
     "webpacker-cli": "^0.4.1"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
     "react": "^16.5.2",
-    "react-dom": "^16.5.2"
+    "react-dom": "^16.5.2",
+    "react-side-effect": "^1.1.5"
   }
 }
