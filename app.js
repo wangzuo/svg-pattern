@@ -6,14 +6,15 @@ import Body from './body';
 
 const TEMPLATES = {
   architect: `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="199" viewBox="0 0 100 199"><g fill="#000"><path d="M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z"></path></g></svg>`,
-
   'brick-wall': `<svg width="42" height="44" viewBox="0 0 42 44" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd"><g id="brick-wall" fill="#000"><path d="M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z"/></g></g></svg>`
 };
+const DEFAULT = 'architect';
 
 export default class App extends Component {
   state = {
     tab: 0,
-    svg: ``
+    template: DEFAULT,
+    svg: TEMPLATES[DEFAULT]
   };
 
   handleSvgChange = e => {
