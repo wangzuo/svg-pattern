@@ -1,0 +1,19 @@
+{
+  "name": "svg-pattern",
+  "version": "0.1.0",
+  "main": "index.js",
+  "scripts": {
+    "watch": "NODE_ENV=development webpacker watch",
+    "build": "NODE_ENV=production webpacker build"
+  },
+  "repository": "git@github.com:wangzuo/svg-pattern.git",
+  "author": "Wang Zuo <wzuoadjusted@gmail.com> (https://wangzuo.me)",
+  "license": "MIT",
+  "devDependencies": {
+    "webpacker-cli": "^0.4.1"
+  },
+  "dependencies": {
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}
