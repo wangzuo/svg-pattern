@@ -8,6 +8,7 @@ const TEMPLATES = {
   architect: `<svg xmlns="http://www.w3.org/2000/svg" width="100" height="199" viewBox="0 0 100 199"><g fill="#000"><path d="M0 199V0h1v1.99L100 199h-1.12L1 4.22V199H0zM100 2h-.12l-1-2H100v2z"></path></g></svg>`,
   'brick-wall': `<svg width="42" height="44" viewBox="0 0 42 44" xmlns="http://www.w3.org/2000/svg"><g id="Page-1" fill="none" fill-rule="evenodd"><g id="brick-wall" fill="#000"><path d="M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z"/></g></g></svg>`
 };
+
 const DEFAULT = 'architect';
 
 export default class App extends Component {
@@ -27,10 +28,9 @@ export default class App extends Component {
   };
 
   render() {
+    const { tab, svg, template } = this.state;
     const bodyStyle = {
-      backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(
-        this.state.svg
-      )}")`
+      backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(svg)}")`
     };
 
     return (
@@ -39,7 +39,7 @@ export default class App extends Component {
           <div className={styles.tabs}>
             <div
               className={cx(styles.tab, {
-                [styles.tabActive]: this.state.tab === 0
+                [styles.tabActive]: tab === 0
               })}
               onClick={() => this.setState({ tab: 0 })}
             >
@@ -47,7 +47,7 @@ export default class App extends Component {
             </div>
             <div
               className={cx(styles.tab, {
-                [styles.tabActive]: this.state.tab === 1
+                [styles.tabActive]: tab === 1
               })}
               onClick={() => this.setState({ tab: 1 })}
             >
@@ -55,17 +55,17 @@ export default class App extends Component {
             </div>
           </div>
 
-          {this.state.tab === 0 && (
+          {tab === 0 && (
             <textarea
               className={styles.textarea}
               onChange={this.handleSvgChange}
-              value={this.state.svg}
+              value={svg}
               rows="10"
               placeholder="svg"
             />
           )}
 
-          {this.state.tab === 1 && (
+          {tab === 1 && (
             <textarea
               className={styles.textarea}
               value={`background-image: ${bodyStyle.backgroundImage}`}
@@ -75,7 +75,7 @@ export default class App extends Component {
           )}
 
           <select
-            value={this.state.template}
+            value={template}
             className={styles.select}
             onChange={this.handleTemplateChange}
           >
@@ -83,7 +83,7 @@ export default class App extends Component {
             <option value="brick-wall">brick-wall</option>
           </select>
 
-          <a href="https://github.com/wangzuo/svg-pattern">Source</a>
+          <a href="https://github.com/swiftcarrot/svg-pattern">Source</a>
         </div>
       </Body>
     );
