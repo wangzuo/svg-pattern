@@ -10,7 +10,7 @@
   "author": "Wang Zuo <wzuoadjusted@gmail.com> (https://wangzuo.me)",
   "license": "MIT",
   "devDependencies": {
-    "webpacker-cli": "^0.4.1"
+    "@swiftcarrot/webpacker": "^2.6.0"
   },
   "dependencies": {
     "classnames": "^2.2.6",
