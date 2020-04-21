@@ -16,6 +16,6 @@
     "react-side-effect": "^2.1.0"
   },
   "devDependencies": {
-    "@swiftcarrot/webpacker": "^2.6.1"
+    "@swiftcarrot/webpacker": "^2.8.1"
   }
 }
