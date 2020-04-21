@@ -19,6 +19,7 @@ function handleStateChangeOnClient(style) {
   Object.assign(document.body.style, style);
 }
 
-export default withSideEffect(reducePropsToState, handleStateChangeOnClient)(
-  Body
-);
+export default withSideEffect(
+  reducePropsToState,
+  handleStateChangeOnClient
+)(Body);

@@ -41,16 +41,14 @@ export default class App extends Component {
               className={cx(styles.tab, {
                 [styles.tabActive]: tab === 0
               })}
-              onClick={() => this.setState({ tab: 0 })}
-            >
+              onClick={() => this.setState({ tab: 0 })}>
               svg
             </div>
             <div
               className={cx(styles.tab, {
                 [styles.tabActive]: tab === 1
               })}
-              onClick={() => this.setState({ tab: 1 })}
-            >
+              onClick={() => this.setState({ tab: 1 })}>
               css
             </div>
           </div>
@@ -77,8 +75,7 @@ export default class App extends Component {
           <select
             value={template}
             className={styles.select}
-            onChange={this.handleTemplateChange}
-          >
+            onChange={this.handleTemplateChange}>
             <option value="architect">architect</option>
             <option value="brick-wall">brick-wall</option>
           </select>
