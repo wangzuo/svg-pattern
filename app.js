@@ -80,7 +80,7 @@ export default class App extends Component {
             <option value="brick-wall">brick-wall</option>
           </select>
 
-          <a href="https://github.com/swiftcarrot/svg-pattern">Source</a>
+          <a href="https://github.com/wangzuo/svg-pattern">Source</a>
         </div>
       </Body>
     );

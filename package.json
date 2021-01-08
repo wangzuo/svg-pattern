@@ -6,7 +6,7 @@
     "start": "NODE_ENV=development webpacker serve",
     "build": "NODE_ENV=production webpacker build"
   },
-  "repository": "git@github.com:swiftcarrot/svg-pattern.git",
+  "repository": "git@github.com:wangzuo/svg-pattern.git",
   "author": "Wang Zuo <wangzuo@swiftcarrot.com> (https://swiftcarrot.com)",
   "license": "MIT",
   "dependencies": {
