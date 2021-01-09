@@ -83,7 +83,7 @@ export default class App extends Component {
             <option value="brick-wall">brick-wall</option>
           </select>
 
-          <a href="https://github.com/wangzuo/svg-pattern">Source on GitHub</a>
+          <a href="https://github.com/wangzuo/svg-pattern">View source on GitHub</a>
         </div>
       </Body>
     );
